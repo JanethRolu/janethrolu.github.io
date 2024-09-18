@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --main-color:#cfe01c;
+    --black:#13131a;
+    --bg:#2bdc1b;
+    --border:.1rem solid rgba(255,255,255,.3);
+}
+
+*{
+    font-family: "Roboto", sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none;border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem
+}
+
+.header{
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position:fixed ;
+    top: 0; left: 0;right: 0;
+    z-index: 1000;
+}
+
+.header .logo img{
+height: 6rem;
+border-radius: 50%
+}
+
+.header .navbar a{
+    margin: 0 1rem;
+    font-size: 1.6 rem;
+    color: #fff;
+}
+
+.header.navbar a:hover{
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+.header.iconos div{
+    display: inline-flexbox
+    color #2bdc1b;
+    cursor: pointer;
+    font-size: 2.5 rem;
+    margin-left: 2rem;
+    
+}
+
+
+.header.iconos div:hover{
+    color:var(--main-color)
+}
+
+section{
+    padding: 2rem 7%;
+}
+
+.nosotros{
+    display: inline-block;
+    color: #1d0808;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+    
+}
+
+.nosotros.span{
+    color: var(--main-color)
+    text-transform uppercase;
+}
+
+#boton-menu{
+    display: none;
+}
+
+.header .barra-busqueda{
+    position: absolute;
+    top: 115%; right: 7%;
+    background: #1d0808;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+
+}
+
+.header .barra-busqueda input{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: var(--black);
+    padding: 1rem;
+    text-transform: none;
+}
+
+.header .barra-busqueda label{
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color:var(--black)
+}
+
+.header .barra-busqueda label:hover{
+    color: var(--main-color);
+
+}
+
+.inicio{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(./Imagenes/portada.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.inicio.contenido{
+    max-width: 60rem;
+}
+
+.inicio.contenido h3{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: #2bdc1b;
+
+}
+
+.inicio.contenido p{
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: #13131a;
+
+}
+
+.nosotros.linea{
+    display: flex;
+    align-items: center;
+    background: #fff;
+    flex-wrap: wrap;
+}
+
+.nosotros.linea.imagen{
+    flex: 1 1 45rem;
+}
+
+.nosotros.linea.imagen img{
+  width: 100%;;
+}
+
+.nosotros.linea.contenido{
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+.nosotros.linea.contenido h3{
+    font-size: 3rem;
+    color: #1d0808;
+}
+
+.nosotros.linea.contenido p{
+    font-size: 1.6rem;
+    color: #1d0808;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+.productos.tipo-cajas{
+    display: inline-flexbox;
+    grid-template-columns: repeat(auto-fit, minmax(30 rem, 1fr));
+    gap: 1.5 rem;
+}
+    
+.productos.tipo-cajas.cajas{
+    padding: 5rem;
+    text-align: center;
+    border: var(--border);
+}
+
+.productos.tipo-cajas.cajas img{
+    height: 10rem;
+}
+
+.productos.tipo-cajas.cajas h3{
+    color: #1d0808;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.productos.tipo-cajas.cajas:hover{
+    background: #2bdc1b;
+}
+
+.productos.tipo-cajas.cajas:hover > *{
+    color: #e3f30a;
+}
+    
+
+
+    
+
+
+
+@media(max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding: 1.5rem 2rem;
+    }
+    section{
+        padding: 2rem;
+    }
+
+}
+
+@media(max-width:991px){
+
+    #boton-menu{
+        display:inline-block;
+    }
+
+    .header.navbar{
+        position: absolute;
+        top: 100%; right: 0;
+        background: #fff;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+    }
+
+    .header.navbar a{
+        color: var(--black);
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+    }
+
+    .home{
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .home.home.contenido h3{
+       font-size: 4.5rem;
+    }
+
+    .home.home.contenido p{
+        font-size: 1.5rem;
+     }
+
+  
+
+}
+
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+}
+
